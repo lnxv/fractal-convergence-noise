@@ -1,0 +1,242 @@
+[
+  {
+    "sigma": 0.0,
+    "mode": "grad_noise",
+    "dimension": 1.3778350197169684,
+    "r2": 0.9994254791252183,
+    "n_boundary_pts": 5614,
+    "counts": {
+      "pos": 34602,
+      "neg": 22907,
+      "diverge": 64991
+    }
+  },
+  {
+    "sigma": 0.002,
+    "mode": "grad_noise",
+    "dimension": 1.3844038139546897,
+    "r2": 0.9995096804021212,
+    "n_boundary_pts": 5825,
+    "counts": {
+      "pos": 34591,
+      "neg": 22921,
+      "diverge": 64988
+    }
+  },
+  {
+    "sigma": 0.005,
+    "mode": "grad_noise",
+    "dimension": 1.4143320061988809,
+    "r2": 0.9993038118864682,
+    "n_boundary_pts": 6662,
+    "counts": {
+      "pos": 34568,
+      "neg": 22940,
+      "diverge": 64992
+    }
+  },
+  {
+    "sigma": 0.01,
+    "mode": "grad_noise",
+    "dimension": 1.4719602968313146,
+    "r2": 0.9994349784763377,
+    "n_boundary_pts": 8757,
+    "counts": {
+      "pos": 34540,
+      "neg": 22919,
+      "diverge": 65041
+    }
+  },
+  {
+    "sigma": 0.02,
+    "mode": "grad_noise",
+    "dimension": 1.5291053518501665,
+    "r2": 0.9999162999862312,
+    "n_boundary_pts": 13562,
+    "counts": {
+      "pos": 34489,
+      "neg": 22955,
+      "diverge": 65056
+    }
+  },
+  {
+    "sigma": 0.05,
+    "mode": "grad_noise",
+    "dimension": 1.686055586504732,
+    "r2": 0.999559318893904,
+    "n_boundary_pts": 26278,
+    "counts": {
+      "pos": 34343,
+      "neg": 23078,
+      "diverge": 65079
+    }
+  },
+  {
+    "sigma": 0.01,
+    "mode": "step_noise",
+    "dimension": 1.4147258167615029,
+    "r2": 0.9993294839523975,
+    "n_boundary_pts": 6844,
+    "counts": {
+      "pos": 34603,
+      "neg": 22954,
+      "diverge": 64943
+    }
+  },
+  {
+    "sigma": 0.05,
+    "mode": "step_noise",
+    "dimension": 1.5442371122361156,
+    "r2": 0.9990750843892813,
+    "n_boundary_pts": 14467,
+    "counts": {
+      "pos": 34589,
+      "neg": 23095,
+      "diverge": 64816
+    }
+  },
+  {
+    "sigma": 0.1,
+    "mode": "step_noise",
+    "dimension": 1.668603548076152,
+    "r2": 0.9991739482180512,
+    "n_boundary_pts": 22940,
+    "counts": {
+      "pos": 34913,
+      "neg": 23226,
+      "diverge": 64361
+    }
+  },
+  {
+    "sigma": 0.2,
+    "mode": "step_noise",
+    "dimension": 1.7962309826107703,
+    "r2": 0.9992326487058358,
+    "n_boundary_pts": 38994,
+    "counts": {
+      "pos": 35550,
+      "neg": 24184,
+      "diverge": 62766
+    }
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
