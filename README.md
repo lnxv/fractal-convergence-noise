@@ -1,243 +1,75 @@
-# Does Noise Smooth or Roughen the Fractal Convergence Boundary in Gradient Descent?
+# Noise and the fractal convergence boundary of gradient descent
 
-A computational investigation extending [Liang & Montúfar, "Gradient Descent with Large
-Step Sizes: Chaos and Fractal Convergence Region" (arXiv:2509.25351, ICLR 2026)](https://arxiv.org/abs/2509.25351).
+Numerical experiments extending Liang & Montúfar, *Gradient Descent with Large Step Sizes: Chaos and Fractal Convergence Region* (ICLR 2026, [arXiv:2509.25351](https://arxiv.org/abs/2509.25351)).
 
-Done as a research exercise suggested by Prof. Guido Montúfar (UCLA).
+**Question.** For gradient descent with near-critical step size on regularized scalar factorization, the set of initializations that converge has a fractal boundary. Does a small amount of noise preserve that boundary, blur it, or change it, and how does the effect scale with the noise level?
 
-## Background
+**Short answer.** Noise blurs the boundary into a band of uncertain outcomes whose area grows as a power law in the noise level, while the location of the boundary barely moves. The power-law exponents are of the same order as the uncertainty exponent 2 − D of the deterministic boundary (D ≈ 1.26, consistent with the 1.249 reported in the paper) but mostly larger.
 
-Liang & Montúfar show that gradient descent on a simple regularized matrix
-factorization problem,
+Report: [`report/Noise_and_the_fractal_convergence_boundary.pdf`](report/Noise_and_the_fractal_convergence_boundary.pdf)
 
-```
-L(u, v) = 0.5*(u*v - y)^2 + 0.5*lambda*(u^2 + v^2)
-```
+![Survival probability maps](results/fig_probability_maps.png)
 
-develops a **fractal convergence boundary** at near-critical step sizes: the set of
-initializations that converge to each of the two global minimizers forms a
-self-similar, spiky region, with an estimated box-counting dimension of **1.249**.
+## Setup
 
-## Research question
-
-The paper's analysis is for deterministic gradient descent. In practice, we train
-with SGD, which behaves like gradient descent plus noise. **Does adding noise smooth
-out the fractal boundary (as noise often regularizes sensitive dynamical systems), or
-does it make the unpredictability worse?**
+- Loss `L(u, v) = ½(uv − y)² + ½λ(u² + v²)` with `y = 0.5`, `λ = 0.2`, step size `η = 1` (the setting of Figure 3 in the paper).
+- **Step noise:** `η_t = η(1 + σ ξ_t)`, `ξ_t ~ U(−1, 1)`, applied to the full gradient.
+- **Additive noise:** gradient `∇L + σ Z_t`, `Z_t ~ N(0, I)` (a stylized proxy for SGD).
+- A trajectory **escapes** if `|u|` or `|v|` exceeds `1e8` within 200 steps.
 
 ## Method
 
-1. **Reproduce the deterministic baseline.** Used the authors' own released code
-   ([anonymous.4open.science/r/chaos-matrix-factorization-07C5](https://anonymous.4open.science/r/chaos-matrix-factorization-07C5))
-   to get the exact parameters (`y=0.5, eta=1.0, lambda=0.2`) and convergence
-   criterion, rather than guessing. Validated the reproduction visually against their
-   published Figure 3 and numerically via box-counting dimension (got 1.33 vs. their
-   reported 1.249; the small gap is expected given a coarser grid and a simpler
-   boundary-extraction method than their exact symmetry-reduced approach).
+With noise, an initialization has a *probability* of not escaping. A single noisy run per pixel with independent noise produces speckle that looks like a rougher boundary but is sampling noise (see `results/fig_coupling.png`). Instead, following the probability-basin approach of Nieto, Seoane & Sanjuán (2021), the survival probability is estimated from 128 independent runs per initialization, and the uncertain fraction `0.1 < p < 0.9` is fitted as `σ^β`. For deterministic GD the uncertainty exponent of Grebogi, McDonald, Ott & Yorke (1983) gives the box-counting dimension of the boundary via `f(ε) ~ ε^(2 − D)`.
 
-2. **Introduce stochasticity**, two models:
-   - **Gradient noise** (SGD-like): add i.i.d. Gaussian noise `N(0, sigma^2)` to each
-     coordinate of the gradient at every step.
-   - **Step-size noise**: randomize the step size `eta_t ~ Uniform[eta(1-sigma),
-     eta(1+sigma)]` at every step.
+## Results
 
-3. **Measure boundary complexity** as a function of noise level `sigma`, using the
-   same box-counting dimension method the paper uses: extract boundary points
-   (grid cells adjacent to a differently-classified neighbor), normalize into the
-   unit square, count occupied boxes at scales `eps = 1/2^k` for `k=2..8`, and fit
-   `log N(eps)` vs `log(1/eps)` with a line; the slope is the estimated dimension.
+Windows near the boundary: W1 = [2, 2.7] × [−0.3, 0.3], W2 = [1.7, 2.3] × [0.5, 1.1]; 121 × 121 grids, 128 runs per point.
 
-## Result
+| Window | β, step noise | β, additive noise | 2 − D (deterministic) | D |
+|---|---|---|---|---|
+| W1 | 0.86 ± 0.01 | 0.84 ± 0.02 | 0.74 ± 0.01 | 1.26 |
+| W2 | 0.73 ± 0.01 | 0.83 ± 0.01 | 0.74 ± 0.01 | 1.26 |
 
-**Noise does not smooth the fractal boundary. It makes it monotonically more
-complex, in both noise models, with a very clean fit (R² > 0.999 throughout):**
+- The p = ½ contour differs from the deterministic boundary on 0.1–3.7% of each window; total survival changes by less than 0.014.
+- Fine filaments are washed out first: at moderate σ the p = ½ contour is 20–35% smoother than the deterministic boundary.
+- The uncertain fraction is stable under 2× grid refinement (0.134 vs 0.135 at σ = 0.1) and under doubling the horizon (0.136).
 
-| Gradient noise σ | Box-counting dim. | R² |
-|---|---|---|
-| 0.000 | 1.378 | 0.9994 |
-| 0.002 | 1.384 | 0.9995 |
-| 0.005 | 1.414 | 0.9993 |
-| 0.010 | 1.472 | 0.9994 |
-| 0.020 | 1.529 | 0.9999 |
-| 0.050 | 1.686 | 0.9996 |
+![Scaling of the uncertain fraction](results/fig_scaling.png)
 
-| Step-size noise σ | Box-counting dim. | R² |
-|---|---|---|
-| 0.01 | 1.415 | 0.9993 |
-| 0.05 | 1.544 | 0.9991 |
-| 0.10 | 1.669 | 0.9992 |
-| 0.20 | 1.796 | 0.9992 |
-
-Visually (see `results/figures/`), the boundary goes from a clean, sparse fractal
-spike pattern at `sigma=0` to a dense, fine-grained "salt-and-pepper" speckle at
-higher `sigma`: the zone of unpredictable, sensitive-to-initialization behavior
-*expands* rather than blurring away.
-
-## Limitations / honest caveats
-
-- Results are from a **single zoomed-in boundary region** near one spike, not the
-  full boundary; the trend should be checked in other regions to confirm it's not
-  specific to this location.
-- Each grid point used a **single noise realization** (one random seed), not
-  averaged over multiple runs, so individual dimension values carry some
-  seed-dependent noise, though the monotonic trend across six noise levels in two
-  independent noise models is a strong signal that this is real, not an artifact.
-- Grid resolution (350-500 per side) is modest compared to what a
-  numpy/GPU-accelerated implementation could do; this was a pure-Python,
-  multiprocessing-parallelized implementation (see Implementation notes).
-
-## Implementation notes
-
-The code is written with **NumPy + Matplotlib**, vectorized so each noise sweep
-evaluates the entire grid of initializations and every GD step as array
-operations, not a Python-level loop per pixel.
-
-**Important:** this code was developed in a sandboxed environment where NumPy's
-compiled extensions could not be loaded, so it could not be executed end-to-end
-there. An earlier pure-Python implementation (no NumPy, hand-rolled PRNG and PPM
-writer, parallelized with `multiprocessing` instead) was used to generate and
-validate the actual numeric results reported above, that version works without
-any dependencies. The NumPy version in `src/` is a direct, careful translation of
-the same equations, parameters, and box-counting algorithm, intended to be the
-version actually run going forward (much faster, allows far higher resolution).
-**Before trusting its output, run it locally and confirm the numbers/figures
-match what's reported here**; if anything differs, the pure-Python version's
-logic is the validated reference to debug against.
-
-## Repository structure
-
-```
-src/
-  baseline.py      deterministic gradient descent + convergence classification,
-                    exact parameters/criterion matching the authors' code
-  stochastic.py     gradient-noise and step-size-noise variants,
-                    multiprocessing-parallelized grid evaluation
-  boxcount.py       box-counting fractal dimension estimator (matches the
-                    paper's own method)
-  analysis.py       runs the full noise sweep and saves results/final_results.json
-results/
-  final_results.json   full numeric results table
-  figures/             baseline + noise-sweep visualizations (PNG)
-```
-
-## Running it
-
-No dependencies beyond the Python 3 standard library.
+## Reproduce
 
 ```bash
-cd src
-python3 baseline.py       # reproduces the deterministic fractal boundary
-python3 analysis.py       # runs the full noise sweep, saves results/final_results.json
+pip install -r requirements.txt
+python src/test_dynamics.py      # correctness checks
+python src/run_all.py            # all numbers and figures (~15 min)
+QUICK=1 python src/run_all.py    # small smoke test (~2 min)
 ```
 
-## Reference
+Outputs go to `results/` (`results.json` plus figures).
 
-Liang, S. & Montúfar, G. (2026). *Gradient Descent with Large Step Sizes: Chaos and
-Fractal Convergence Region.* ICLR 2026. [arXiv:2509.25351](https://arxiv.org/abs/2509.25351)
+## Layout
 
+```
+src/dynamics.py       GD with noise, vectorized over initial conditions and runs
+src/metrics.py        uncertain fraction, interface measures, power-law fits
+src/figures.py        figures
+src/run_all.py        baseline, noise sweep, uncertainty exponent, controls
+src/test_dynamics.py  gradient vs finite differences, fixed points, projected map, symmetry, reproducibility
+results/              results.json and figures
+report/               short written report
+```
 
+## Limitations
 
+- Survival within a finite horizon is not asymptotic convergence; only escape vs. survival is analysed, not which minimizer is selected.
+- Two local windows; band thresholds 0.1/0.9 are a choice; 128 runs per point.
+- Additive Gaussian noise is a stand-in for SGD; minibatch noise and matrix factorization are not yet tested.
 
+An earlier version of this repository (see commit history) measured box-counting dimension on single noise realizations. That analysis confused sampling speckle with geometry and is superseded by the probability-based analysis here.
 
+## References
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+1. S. Liang, G. Montúfar. Gradient descent with large step sizes: chaos and fractal convergence region. ICLR 2026. arXiv:2509.25351.
+2. C. Grebogi, S. W. McDonald, E. Ott, J. A. Yorke. Final state sensitivity: an obstruction to predictability. Phys. Lett. A 99 (1983) 415–418.
+3. A. R. Nieto, J. M. Seoane, M. A. F. Sanjuán. Final state sensitivity in noisy chaotic scattering. Chaos, Solitons & Fractals 150 (2021) 111181.
+4. J. Sohl-Dickstein. The boundary of neural network trainability is fractal. arXiv:2402.06184 (2024).
