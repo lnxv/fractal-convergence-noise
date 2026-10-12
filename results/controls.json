@@ -1,0 +1,13 @@
+{
+  "mode": "step",
+  "sigma": 0.1,
+  "band_resolution_81": 0.13427831123304373,
+  "band_resolution_161": 0.13494849735735504,
+  "band_horizon_400": 0.13625971650663007,
+  "interface": {
+    "deterministic": 0.01581196581196581,
+    "common_noise": 0.015934065934065933,
+    "independent_noise": 0.05891330891330891,
+    "probability_majority": 0.014774114774114774
+  }
+}

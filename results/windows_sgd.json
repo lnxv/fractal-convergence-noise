@@ -1,0 +1,193 @@
+{
+  "modes": [
+    "sgd"
+  ],
+  "trials": 96,
+  "resolution": 101,
+  "records": [
+    {
+      "window": "W1",
+      "mode": "deterministic",
+      "sigma": 0.0,
+      "survival": 0.46907165964121167,
+      "median_interface": 0.0149009900990099,
+      "basin_interface": 0.04217821782178218
+    },
+    {
+      "window": "W1",
+      "mode": "sgd",
+      "sigma": 0.0025,
+      "trials": 96,
+      "resolution": 101,
+      "survival": 0.46924116916642156,
+      "converged": 0.09350696827108455,
+      "band_fraction": 0.016665032839917656,
+      "selection_fraction": 0.03333006567983531,
+      "shift_fraction": 0.005195569061856681,
+      "median_interface": 0.0149009900990099
+    },
+    {
+      "window": "W1",
+      "mode": "sgd",
+      "sigma": 0.005,
+      "trials": 96,
+      "resolution": 101,
+      "survival": 0.46842017122504326,
+      "converged": 0.0,
+      "band_fraction": 0.026566022938927555,
+      "selection_fraction": 0.05421037153220273,
+      "shift_fraction": 0.008822664444662289,
+      "median_interface": 0.015297029702970297
+    },
+    {
+      "window": "W1",
+      "mode": "sgd",
+      "sigma": 0.01,
+      "trials": 96,
+      "resolution": 101,
+      "survival": 0.4684303826422247,
+      "converged": 0.0,
+      "band_fraction": 0.04656406234682874,
+      "selection_fraction": 0.0891089108910891,
+      "shift_fraction": 0.014018233506518969,
+      "median_interface": 0.017623762376237622
+    },
+    {
+      "window": "W1",
+      "mode": "sgd",
+      "sigma": 0.02,
+      "trials": 96,
+      "resolution": 101,
+      "survival": 0.46828333823481355,
+      "converged": 0.0,
+      "band_fraction": 0.08263895696500344,
+      "selection_fraction": 0.14351534163317323,
+      "shift_fraction": 0.024703460445054407,
+      "median_interface": 0.02420792079207921
+    },
+    {
+      "window": "W1",
+      "mode": "sgd",
+      "sigma": 0.04,
+      "trials": 96,
+      "resolution": 101,
+      "survival": 0.46733163415351436,
+      "converged": 0.0,
+      "band_fraction": 0.1498872659543182,
+      "selection_fraction": 0.22527203215371042,
+      "shift_fraction": 0.03764336829722576,
+      "median_interface": 0.03415841584158416
+    },
+    {
+      "window": "W2",
+      "mode": "deterministic",
+      "sigma": 0.0,
+      "survival": 0.5757278698166847,
+      "median_interface": 0.016237623762376238,
+      "basin_interface": 0.039504950495049505
+    },
+    {
+      "window": "W2",
+      "mode": "sgd",
+      "sigma": 0.0025,
+      "trials": 96,
+      "resolution": 101,
+      "survival": 0.5754205061595268,
+      "converged": 0.11452921282227232,
+      "band_fraction": 0.012645819037349279,
+      "selection_fraction": 0.02617390451916479,
+      "shift_fraction": 0.0036270953828056074,
+      "median_interface": 0.015495049504950495
+    },
+    {
+      "window": "W2",
+      "mode": "sgd",
+      "sigma": 0.005,
+      "trials": 96,
+      "resolution": 101,
+      "survival": 0.5747506371924321,
+      "converged": 0.0,
+      "band_fraction": 0.022840897951181258,
+      "selection_fraction": 0.04127046368003137,
+      "shift_fraction": 0.006175865111263602,
+      "median_interface": 0.014801980198019801
+    },
+    {
+      "window": "W2",
+      "mode": "sgd",
+      "sigma": 0.01,
+      "trials": 96,
+      "resolution": 101,
+      "survival": 0.5748241593961376,
+      "converged": 0.0,
+      "band_fraction": 0.04234878933437898,
+      "selection_fraction": 0.06293500637192433,
+      "shift_fraction": 0.009900990099009901,
+      "median_interface": 0.014405940594059407
+    },
+    {
+      "window": "W2",
+      "mode": "sgd",
+      "sigma": 0.02,
+      "trials": 96,
+      "resolution": 101,
+      "survival": 0.5744381678266837,
+      "converged": 0.0,
+      "band_fraction": 0.06940496029801,
+      "selection_fraction": 0.09959807861974317,
+      "shift_fraction": 0.016174884815214195,
+      "median_interface": 0.01787128712871287
+    },
+    {
+      "window": "W2",
+      "mode": "sgd",
+      "sigma": 0.04,
+      "trials": 96,
+      "resolution": 101,
+      "survival": 0.5741716498382512,
+      "converged": 0.0,
+      "band_fraction": 0.12439956866973827,
+      "selection_fraction": 0.1585138711890991,
+      "shift_fraction": 0.02676208214880894,
+      "median_interface": 0.023811881188118812
+    }
+  ],
+  "fits": [
+    {
+      "window": "W1",
+      "mode": "sgd",
+      "quantity": "band_fraction",
+      "exponent": 0.797520329003442,
+      "se": 0.020207992797345573,
+      "r2": 0.9980775795083259,
+      "intercept": 0.63658945334265
+    },
+    {
+      "window": "W1",
+      "mode": "sgd",
+      "quantity": "selection_fraction",
+      "exponent": 0.691810846106616,
+      "se": 0.007160741543556166,
+      "r2": 0.9996786909529732,
+      "intercept": 0.7527398223988608
+    },
+    {
+      "window": "W2",
+      "mode": "sgd",
+      "quantity": "band_fraction",
+      "exponent": 0.819991760226442,
+      "se": 0.015919357490613326,
+      "r2": 0.9988705615645099,
+      "intercept": 0.5635015747841059
+    },
+    {
+      "window": "W2",
+      "mode": "sgd",
+      "quantity": "selection_fraction",
+      "exponent": 0.6467824327277987,
+      "se": 0.006023500940428072,
+      "r2": 0.9997398703832433,
+      "intercept": 0.22958739903401296
+    }
+  ]
+}

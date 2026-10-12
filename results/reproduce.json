@@ -1,0 +1,173 @@
+{
+  "baseline": {
+    "steps_100": {
+      "escaped": 126880,
+      "near_plus_min": 16901,
+      "near_minus_min": 16901,
+      "near_saddle": 59,
+      "unresolved": 60
+    },
+    "steps_400": {
+      "escaped": 126880,
+      "near_plus_min": 16951,
+      "near_minus_min": 16911,
+      "near_saddle": 59,
+      "unresolved": 0
+    }
+  },
+  "projected_boundary_dimension": {
+    "exponent": 1.2490294287909247,
+    "se": 0.03273977682601127,
+    "r2": 0.9965763711499437,
+    "intercept": 0.4768255082241394,
+    "eps": [
+      0.25,
+      0.125,
+      0.0625,
+      0.03125,
+      0.015625,
+      0.0078125,
+      0.00390625
+    ],
+    "counts": [
+      8,
+      21,
+      56,
+      140,
+      320,
+      675,
+      1430
+    ]
+  },
+  "critical_step_size": {
+    "y": 1.0,
+    "samples": 20000,
+    "steps": 4000,
+    "below_0.03": 1.0,
+    "above_0.03": 1.0,
+    "below_0.1": 1.0,
+    "above_0.1": 1.0
+  },
+  "uncertainty": [
+    {
+      "window": "W1",
+      "samples": 40000,
+      "rows": [
+        {
+          "eps": 0.0001,
+          "escape_flip": 0.00155,
+          "outcome_flip": 0.00435
+        },
+        {
+          "eps": 0.0002,
+          "escape_flip": 0.002225,
+          "outcome_flip": 0.00655
+        },
+        {
+          "eps": 0.0005,
+          "escape_flip": 0.0049,
+          "outcome_flip": 0.013175
+        },
+        {
+          "eps": 0.001,
+          "escape_flip": 0.007825,
+          "outcome_flip": 0.021575
+        },
+        {
+          "eps": 0.002,
+          "escape_flip": 0.012775,
+          "outcome_flip": 0.0369
+        },
+        {
+          "eps": 0.005,
+          "escape_flip": 0.02545,
+          "outcome_flip": 0.071075
+        },
+        {
+          "eps": 0.01,
+          "escape_flip": 0.0441,
+          "outcome_flip": 0.114575
+        },
+        {
+          "eps": 0.02,
+          "escape_flip": 0.07635,
+          "outcome_flip": 0.184425
+        }
+      ],
+      "escape_flip": {
+        "exponent": 0.7418081073446477,
+        "se": 0.010711826295196594,
+        "r2": 0.998750454334871,
+        "intercept": 0.28751183968704214,
+        "implied_dimension": 1.2581918926553524
+      },
+      "outcome_flip": {
+        "exponent": 0.7181768544665503,
+        "se": 0.00625845979242256,
+        "r2": 0.9995445659083686,
+        "intercept": 1.138041098808065,
+        "implied_dimension": 1.2818231455334497
+      }
+    },
+    {
+      "window": "W2",
+      "samples": 40000,
+      "rows": [
+        {
+          "eps": 0.0001,
+          "escape_flip": 0.001475,
+          "outcome_flip": 0.003675
+        },
+        {
+          "eps": 0.0002,
+          "escape_flip": 0.00235,
+          "outcome_flip": 0.00585
+        },
+        {
+          "eps": 0.0005,
+          "escape_flip": 0.004875,
+          "outcome_flip": 0.0125
+        },
+        {
+          "eps": 0.001,
+          "escape_flip": 0.008325,
+          "outcome_flip": 0.02055
+        },
+        {
+          "eps": 0.002,
+          "escape_flip": 0.0133,
+          "outcome_flip": 0.031825
+        },
+        {
+          "eps": 0.005,
+          "escape_flip": 0.026075,
+          "outcome_flip": 0.060275
+        },
+        {
+          "eps": 0.01,
+          "escape_flip": 0.0437,
+          "outcome_flip": 0.0962
+        },
+        {
+          "eps": 0.02,
+          "escape_flip": 0.073975,
+          "outcome_flip": 0.15905
+        }
+      ],
+      "escape_flip": {
+        "exponent": 0.739734643224352,
+        "se": 0.0047684665603889695,
+        "r2": 0.9997507423177207,
+        "intercept": 0.2846788390710211,
+        "implied_dimension": 1.260265356775648
+      },
+      "outcome_flip": {
+        "exponent": 0.7090000709702025,
+        "se": 0.008872702583022677,
+        "r2": 0.9990612225614226,
+        "intercept": 0.950772145183373,
+        "implied_dimension": 1.2909999290297975
+      }
+    }
+  ]
+}
