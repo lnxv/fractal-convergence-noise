@@ -10,7 +10,7 @@ Numerical experiments extending Liang & Montúfar, *Gradient Descent with Large 
 - Noise affects **which minimizer is selected** more strongly than **whether GD converges**.
 - Larger noise changes the picture qualitatively, differently for each noise model: random step sizes enlarge the convergence region, SGD loses its minimizers beyond σ = y − λ, and isotropic noise randomizes the selected minimizer.
 
-Report: [`report/Noise_and_the_fractal_convergence_boundary.pdf`](report/Noise_and_the_fractal_convergence_boundary.pdf)
+Paper: [`report/Noise_and_the_fractal_convergence_boundary.pdf`](report/Noise_and_the_fractal_convergence_boundary.pdf) (LaTeX source in `report/main.tex`; compile with `pdflatex main.tex` inside `report/`)
 
 ![Outcome probabilities over the whole domain](results/fig_global.png)
 
@@ -80,7 +80,7 @@ src/figures.py         all figures
 src/run_all.py         runs everything
 src/test_dynamics.py   gradient vs finite differences, fixed points, projected map, SGD unbiasedness, symmetry, reproducibility, metrics
 results/               JSON results, probability maps (.npz) and figures
-report/                written report
+report/                paper (LaTeX source, figures, compiled PDF)
 ```
 
 ## Limitations
