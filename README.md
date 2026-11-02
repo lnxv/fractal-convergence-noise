@@ -14,6 +14,18 @@ Paper: [`report/Noise_and_the_fractal_convergence_boundary.pdf`](report/Noise_an
 
 ![Outcome probabilities over the whole domain](results/fig_global.png)
 
+## Follow-up: timing of step-size perturbations (November 2026)
+
+Question: how does the *timing* of random step-size perturbations affect uncertainty near the deterministic boundary? In window W1, three experiments: perturb the initialization then run deterministic GD; random step sizes for the first K updates (K = 10, 50) then deterministic GD; random step sizes throughout.
+
+- Outcome definitions were corrected: a run reaches a minimizer only if it ends within 1e-3 of it; runs within that distance of neither are *unresolved*; where no run reaches a minimizer, selection is marked unresolved instead of being set to 1/2 (`src/timing.py`, `src/dynamics.py`, `src/metrics.py`, two new tests).
+- Random step sizes in only the first 10 updates give the same uncertain fractions as random step sizes throughout (within 0.003 at every level). For deterministic GD in W1, 92% of outcomes are decided within 10 steps and all within 50 (`src/decision_time.py`).
+- Uncertain-escape exponents: about 0.78 for the initial perturbation and 0.84-0.85 for step-size noise; selection exponents agree (about 0.64-0.67). Trends persist with T = 600, n = 192 trials, and a narrower fitting range.
+
+Write-up: [`report/timing/Timing_of_step_size_perturbations.pdf`](report/timing/Timing_of_step_size_perturbations.pdf). Reproduce: `cd results/timing && python ../../src/run_timing.py`.
+
+![Timing scaling](results/timing/fig_timing_scaling.png)
+
 ## Setup
 
 - Loss `L(u, v) = ½(uv − y)² + ½λ(u² + v²)` with `y = 0.5`, `λ = 0.2`, step size `η = 1` (the setting of Figure 3 in the paper).

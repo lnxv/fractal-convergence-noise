@@ -86,6 +86,37 @@ def test_metrics():
     assert abs(selection_uncertain_fraction(probs) - 1 / 3) < 1e-12
 
 
+
+def test_unresolved_selection_not_counted_as_uncertain():
+    from metrics import selection_unresolved_fraction
+    # survives, but no run reached a minimizer: unresolved, not uncertain
+    probs = {"survive": np.array([1.0, 1.0]), "plus": np.array([0.0, 0.5]), "minus": np.array([0.0, 0.5])}
+    assert abs(selection_uncertain_fraction(probs) - 0.5) < 1e-12
+    assert abs(selection_unresolved_fraction(probs) - 0.5) < 1e-12
+
+
+def test_timing_outcomes():
+    from timing import outcome_probabilities as op, selection, R_CONV
+    p = Params(steps=200)
+    m = p.minimizer
+    # starting exactly at a minimizer: random step sizes keep it there, so every run reaches it
+    U, V = np.array([[m]]), np.array([[m]])
+    for mode, K in (("persist", None), ("early", 10)):
+        pr = op(U, V, p, mode, 0.2, K, trials=8)
+        assert pr["plus"][0, 0] == 1.0 and pr["escape"][0, 0] == 0.0
+    # probabilities of the four outcomes add up to one
+    U, V = grid((2.0, 2.7, -0.3, 0.3), 9)
+    pr = op(U, V, p, "init", 0.01, None, trials=8)
+    assert np.allclose(pr["escape"] + pr["plus"] + pr["minus"] + pr["unresolved"], 1.0)
+    # selection is NaN where no run reached a minimizer
+    q = selection({"plus": np.array([0.0, 0.25]), "minus": np.array([0.0, 0.75])})
+    assert np.isnan(q[0]) and abs(q[1] - 0.25) < 1e-12
+    # with K = 0 the early-noise experiment is deterministic GD
+    a = op(U, V, p, "early", 0.2, 0, trials=4)
+    u, v, esc = simulate(U, V, p)
+    assert np.array_equal(a["escape"], esc.astype(float))
+
+
 if __name__ == "__main__":
     tests = [f for k, f in sorted(globals().items()) if k.startswith("test_")]
     for t in tests:

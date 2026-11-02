@@ -1,0 +1,82 @@
+{
+ "tag": "more_init",
+ "T": 200,
+ "trials": 192,
+ "res": 101,
+ "window": [
+  2.0,
+  2.7,
+  -0.3,
+  0.3
+ ],
+ "r_conv": 0.001,
+ "deterministic": {
+  "uncertain_escape": 0.0,
+  "uncertain_selection": 0.0,
+  "selection_unresolved": 0.0,
+  "mean_unresolved_prob": 0.0,
+  "mean_escape_prob": 0.5309283403587883
+ },
+ "records": [
+  {
+   "mode": "init",
+   "K": null,
+   "level": 0.001,
+   "uncertain_escape": 0.01499852955592589,
+   "uncertain_selection": 0.02901676306244486,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5309962462830441
+  },
+  {
+   "mode": "init",
+   "K": null,
+   "level": 0.002,
+   "uncertain_escape": 0.02303695716106264,
+   "uncertain_selection": 0.04823056563082051,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5311550338202136
+  },
+  {
+   "mode": "init",
+   "K": null,
+   "level": 0.005,
+   "uncertain_escape": 0.04597588471718459,
+   "uncertain_selection": 0.09057935496519949,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.53126633826749
+  },
+  {
+   "mode": "init",
+   "K": null,
+   "level": 0.01,
+   "uncertain_escape": 0.0794039800019606,
+   "uncertain_selection": 0.14577002254680912,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5314251258046596
+  },
+  {
+   "mode": "init",
+   "K": null,
+   "level": 0.02,
+   "uncertain_escape": 0.1410646015096559,
+   "uncertain_selection": 0.2204685815116165,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5317585285756298
+  },
+  {
+   "mode": "init",
+   "K": null,
+   "level": 0.05,
+   "uncertain_escape": 0.32006666013135965,
+   "uncertain_selection": 0.3925105381825311,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5339279441558017
+  }
+ ]
+}

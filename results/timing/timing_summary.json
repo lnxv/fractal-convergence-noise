@@ -1,0 +1,1202 @@
+{
+ "fits": [
+  {
+   "run": "base",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_escape",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.8471719362780207,
+   "se": 0.014484720922661199,
+   "r2": 0.9991237708660096,
+   "n": 5
+  },
+  {
+   "run": "base",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_escape",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.8394039919124493,
+   "se": 0.022798463110539343,
+   "r2": 0.9992628619504409,
+   "n": 3
+  },
+  {
+   "run": "base",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_selection",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.6385862913902184,
+   "se": 0.010755216675996767,
+   "r2": 0.9991497415026437,
+   "n": 5
+  },
+  {
+   "run": "base",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_selection",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.6404051842365289,
+   "se": 0.02435742428082635,
+   "r2": 0.9985554744052025,
+   "n": 3
+  },
+  {
+   "run": "base",
+   "mode": "early",
+   "K": 50,
+   "quantity": "uncertain_escape",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.8449933331591151,
+   "se": 0.009521003912848543,
+   "r2": 0.9996192720174583,
+   "n": 5
+  },
+  {
+   "run": "base",
+   "mode": "early",
+   "K": 50,
+   "quantity": "uncertain_escape",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.8429850918838508,
+   "se": 0.019515979024622047,
+   "r2": 0.9994643165978718,
+   "n": 3
+  },
+  {
+   "run": "base",
+   "mode": "early",
+   "K": 50,
+   "quantity": "uncertain_selection",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.6467533835520416,
+   "se": 0.012929424274784296,
+   "r2": 0.9988024826265594,
+   "n": 5
+  },
+  {
+   "run": "base",
+   "mode": "early",
+   "K": 50,
+   "quantity": "uncertain_selection",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.6593478139687876,
+   "se": 0.039793649509808376,
+   "r2": 0.9963707293185148,
+   "n": 3
+  },
+  {
+   "run": "base",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "all levels",
+   "levels": [
+    0.001,
+    0.05
+   ],
+   "exponent": 0.7787559605438171,
+   "se": 0.01916956620297684,
+   "r2": 0.9975821438386996,
+   "n": 6
+  },
+  {
+   "run": "base",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "without end points",
+   "levels": [
+    0.002,
+    0.02
+   ],
+   "exponent": 0.7723033973188541,
+   "se": 0.018339150795663728,
+   "r2": 0.9988735211323916,
+   "n": 4
+  },
+  {
+   "run": "base",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "all levels",
+   "levels": [
+    0.001,
+    0.05
+   ],
+   "exponent": 0.65720313812576,
+   "se": 0.010372292009849716,
+   "r2": 0.9990046456656767,
+   "n": 6
+  },
+  {
+   "run": "base",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "without end points",
+   "levels": [
+    0.002,
+    0.02
+   ],
+   "exponent": 0.6633950869534065,
+   "se": 0.014469017199420507,
+   "r2": 0.9990495033993071,
+   "n": 4
+  },
+  {
+   "run": "base",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.8435384543339478,
+   "se": 0.013947428935520029,
+   "r2": 0.9991805098228373,
+   "n": 5
+  },
+  {
+   "run": "base",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.8501784622425703,
+   "se": 0.0042117566520448535,
+   "r2": 0.9999754588061858,
+   "n": 3
+  },
+  {
+   "run": "base",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.6450719043402522,
+   "se": 0.009042664614778045,
+   "r2": 0.9994108282721935,
+   "n": 5
+  },
+  {
+   "run": "base",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.6430181242144984,
+   "se": 0.014852696950045473,
+   "r2": 0.9994667479161538,
+   "n": 3
+  },
+  {
+   "run": "long",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_escape",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.8471719362780207,
+   "se": 0.014484720922661199,
+   "r2": 0.9991237708660096,
+   "n": 5
+  },
+  {
+   "run": "long",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_escape",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.8394039919124493,
+   "se": 0.022798463110539343,
+   "r2": 0.9992628619504409,
+   "n": 3
+  },
+  {
+   "run": "long",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_selection",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.6385862913902184,
+   "se": 0.010755216675996767,
+   "r2": 0.9991497415026437,
+   "n": 5
+  },
+  {
+   "run": "long",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_selection",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.6404051842365289,
+   "se": 0.02435742428082635,
+   "r2": 0.9985554744052025,
+   "n": 3
+  },
+  {
+   "run": "long",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "all levels",
+   "levels": [
+    0.001,
+    0.05
+   ],
+   "exponent": 0.7787559605438171,
+   "se": 0.01916956620297684,
+   "r2": 0.9975821438386996,
+   "n": 6
+  },
+  {
+   "run": "long",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "without end points",
+   "levels": [
+    0.002,
+    0.02
+   ],
+   "exponent": 0.7723033973188541,
+   "se": 0.018339150795663728,
+   "r2": 0.9988735211323916,
+   "n": 4
+  },
+  {
+   "run": "long",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "all levels",
+   "levels": [
+    0.001,
+    0.05
+   ],
+   "exponent": 0.65720313812576,
+   "se": 0.010372292009849716,
+   "r2": 0.9990046456656767,
+   "n": 6
+  },
+  {
+   "run": "long",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "without end points",
+   "levels": [
+    0.002,
+    0.02
+   ],
+   "exponent": 0.6633950869534065,
+   "se": 0.014469017199420507,
+   "r2": 0.9990495033993071,
+   "n": 4
+  },
+  {
+   "run": "long",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.8492127560708925,
+   "se": 0.010815548595102456,
+   "r2": 0.9995136218463925,
+   "n": 5
+  },
+  {
+   "run": "long",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.8380113669673976,
+   "se": 0.01665714792317418,
+   "r2": 0.9996050610999699,
+   "n": 3
+  },
+  {
+   "run": "long",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.6449921012798393,
+   "se": 0.012489218010654422,
+   "r2": 0.9988764439899566,
+   "n": 5
+  },
+  {
+   "run": "long",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.6440360350935899,
+   "se": 0.03141999580985102,
+   "r2": 0.9976255693924025,
+   "n": 3
+  },
+  {
+   "run": "more",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_escape",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.8533538076459558,
+   "se": 0.00943006556111985,
+   "r2": 0.999633787347937,
+   "n": 5
+  },
+  {
+   "run": "more",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_escape",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.8428892919696666,
+   "se": 0.006954329493177206,
+   "r2": 0.9999319324856676,
+   "n": 3
+  },
+  {
+   "run": "more",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_selection",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.6407457111031708,
+   "se": 0.009622825047080834,
+   "r2": 0.999323821653619,
+   "n": 5
+  },
+  {
+   "run": "more",
+   "mode": "early",
+   "K": 10,
+   "quantity": "uncertain_selection",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.6408505177729271,
+   "se": 0.03493663104390129,
+   "r2": 0.9970368082249504,
+   "n": 3
+  },
+  {
+   "run": "more",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "all levels",
+   "levels": [
+    0.001,
+    0.05
+   ],
+   "exponent": 0.7842070104291798,
+   "se": 0.022210432476645576,
+   "r2": 0.996801684197031,
+   "n": 6
+  },
+  {
+   "run": "more",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "without end points",
+   "levels": [
+    0.002,
+    0.02
+   ],
+   "exponent": 0.7859652600270751,
+   "se": 0.012278002385322936,
+   "r2": 0.9995121719047616,
+   "n": 4
+  },
+  {
+   "run": "more",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "all levels",
+   "levels": [
+    0.001,
+    0.05
+   ],
+   "exponent": 0.6647895495002933,
+   "se": 0.01157020908259154,
+   "r2": 0.9987898250822266,
+   "n": 6
+  },
+  {
+   "run": "more",
+   "mode": "init",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "without end points",
+   "levels": [
+    0.002,
+    0.02
+   ],
+   "exponent": 0.6635398450510407,
+   "se": 0.015132835028166071,
+   "r2": 0.9989608337387728,
+   "n": 4
+  },
+  {
+   "run": "more",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.8423347140945769,
+   "se": 0.008433186691441896,
+   "r2": 0.999699389107722,
+   "n": 5
+  },
+  {
+   "run": "more",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_escape",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.8292558061573218,
+   "se": 0.00850767194963129,
+   "r2": 0.9998947556671413,
+   "n": 3
+  },
+  {
+   "run": "more",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "all levels",
+   "levels": [
+    0.01,
+    0.2
+   ],
+   "exponent": 0.64205531331214,
+   "se": 0.008660045489827038,
+   "r2": 0.9994545188485201,
+   "n": 5
+  },
+  {
+   "run": "more",
+   "mode": "persist",
+   "K": null,
+   "quantity": "uncertain_selection",
+   "range": "without end points",
+   "levels": [
+    0.02,
+    0.1
+   ],
+   "exponent": 0.6539586343890804,
+   "se": 0.026457677352144205,
+   "r2": 0.9983658474667456,
+   "n": 3
+  }
+ ],
+ "deterministic": {
+  "base": {
+   "uncertain_escape": 0.0,
+   "uncertain_selection": 0.0,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5309283403587883
+  },
+  "long": {
+   "uncertain_escape": 0.0,
+   "uncertain_selection": 0.0,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5309283403587883
+  },
+  "more": {
+   "uncertain_escape": 0.0,
+   "uncertain_selection": 0.0,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5309283403587883
+  }
+ },
+ "meta": {
+  "base": {
+   "T": 200,
+   "trials": 64,
+   "res": 101
+  },
+  "long": {
+   "T": 600,
+   "trials": 64,
+   "res": 101
+  },
+  "more": {
+   "T": 200,
+   "trials": 192,
+   "res": 101
+  }
+ },
+ "records": {
+  "base": {
+   "early10": [
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.01,
+     "uncertain_escape": 0.019801980198019802,
+     "uncertain_selection": 0.03421233212430154,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5307889545142633
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.02,
+     "uncertain_escape": 0.03460445054406431,
+     "uncertain_selection": 0.054308401137143414,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5308885158317812
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.05,
+     "uncertain_escape": 0.07244387805117146,
+     "uncertain_selection": 0.10087246348397216,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.530361606705225
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.1,
+     "uncertain_escape": 0.1340064699539261,
+     "uncertain_selection": 0.15174982844819135,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5271327565924909
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.2,
+     "uncertain_escape": 0.2526222919321635,
+     "uncertain_selection": 0.23115380845015196,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5169897559062837
+    }
+   ],
+   "early50": [
+    {
+     "mode": "early",
+     "K": 50,
+     "level": 0.01,
+     "uncertain_escape": 0.019801980198019802,
+     "uncertain_selection": 0.033918243309479464,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5307904862268406
+    },
+    {
+     "mode": "early",
+     "K": 50,
+     "level": 0.02,
+     "uncertain_escape": 0.034898539358886385,
+     "uncertain_selection": 0.05254386824821096,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.531057004215273
+    },
+    {
+     "mode": "early",
+     "K": 50,
+     "level": 0.05,
+     "uncertain_escape": 0.07362023331045976,
+     "uncertain_selection": 0.10136261150867562,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5305668561905695
+    },
+    {
+     "mode": "early",
+     "K": 50,
+     "level": 0.1,
+     "uncertain_escape": 0.13586903244779924,
+     "uncertain_selection": 0.1510636212136065,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5273625134790707
+    },
+    {
+     "mode": "early",
+     "K": 50,
+     "level": 0.2,
+     "uncertain_escape": 0.24958337417900206,
+     "uncertain_selection": 0.232722282129203,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5175442358592295
+    }
+   ],
+   "init": [
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.001,
+     "uncertain_escape": 0.01499852955592589,
+     "uncertain_selection": 0.029310851877266935,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5310462822272326
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.002,
+     "uncertain_escape": 0.02401725321046956,
+     "uncertain_selection": 0.047348299186354276,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5312239608861876
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.005,
+     "uncertain_escape": 0.04656406234682874,
+     "uncertain_selection": 0.0892069404960298,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5314154249583374
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.01,
+     "uncertain_escape": 0.07999215763160475,
+     "uncertain_selection": 0.14273110479364767,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5314583129104989
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.02,
+     "uncertain_escape": 0.14253504558376628,
+     "uncertain_selection": 0.2167434565238702,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5319607146358201
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.05,
+     "uncertain_escape": 0.317419860797961,
+     "uncertain_selection": 0.3805509263797667,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5344987623762376
+    }
+   ],
+   "persist": [
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.01,
+     "uncertain_escape": 0.020096069012841878,
+     "uncertain_selection": 0.03362415449465739,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5308134619154985
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.02,
+     "uncertain_escape": 0.03401627291442016,
+     "uncertain_selection": 0.05401431232232134,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5307782325262229
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.05,
+     "uncertain_escape": 0.07371826291540046,
+     "uncertain_selection": 0.09930398980492108,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5305928953043819
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.1,
+     "uncertain_escape": 0.133712381139104,
+     "uncertain_selection": 0.15174982844819135,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5271833031075385
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.2,
+     "uncertain_escape": 0.25046564062346827,
+     "uncertain_selection": 0.23242819331438094,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5173466449367708
+    }
+   ]
+  },
+  "long": {
+   "early10": [
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.01,
+     "uncertain_escape": 0.019801980198019802,
+     "uncertain_selection": 0.03421233212430154,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5307889545142633
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.02,
+     "uncertain_escape": 0.03460445054406431,
+     "uncertain_selection": 0.054308401137143414,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5308885158317812
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.05,
+     "uncertain_escape": 0.07244387805117146,
+     "uncertain_selection": 0.10087246348397216,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.530361606705225
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.1,
+     "uncertain_escape": 0.1340064699539261,
+     "uncertain_selection": 0.15174982844819135,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5271327565924909
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.2,
+     "uncertain_escape": 0.2526222919321635,
+     "uncertain_selection": 0.23115380845015196,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5169897559062837
+    }
+   ],
+   "init": [
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.001,
+     "uncertain_escape": 0.01499852955592589,
+     "uncertain_selection": 0.029310851877266935,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5310462822272326
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.002,
+     "uncertain_escape": 0.02401725321046956,
+     "uncertain_selection": 0.047348299186354276,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5312239608861876
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.005,
+     "uncertain_escape": 0.04656406234682874,
+     "uncertain_selection": 0.0892069404960298,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5314154249583374
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.01,
+     "uncertain_escape": 0.07999215763160475,
+     "uncertain_selection": 0.14273110479364767,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5314583129104989
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.02,
+     "uncertain_escape": 0.14253504558376628,
+     "uncertain_selection": 0.2167434565238702,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5319607146358201
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.05,
+     "uncertain_escape": 0.317419860797961,
+     "uncertain_selection": 0.3805509263797667,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5344987623762376
+    }
+   ],
+   "persist": [
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.01,
+     "uncertain_escape": 0.019409861778257032,
+     "uncertain_selection": 0.033526124889716694,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5308808572688952
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.02,
+     "uncertain_escape": 0.034506420939123615,
+     "uncertain_selection": 0.053622193902558575,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5309696965983727
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.05,
+     "uncertain_escape": 0.07273796686599353,
+     "uncertain_selection": 0.10087246348397216,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5304305337711989
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.1,
+     "uncertain_escape": 0.13322223311440054,
+     "uncertain_selection": 0.15057347318890305,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.527365576904225
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.2,
+     "uncertain_escape": 0.24977943338888345,
+     "uncertain_selection": 0.23144789726497403,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5172654641701794
+    }
+   ]
+  },
+  "more": {
+   "early10": [
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.01,
+     "uncertain_escape": 0.019409861778257032,
+     "uncertain_selection": 0.03519262817370846,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5308221416201027
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.02,
+     "uncertain_escape": 0.034506420939123615,
+     "uncertain_selection": 0.054308401137143414,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5309528477600234
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.05,
+     "uncertain_escape": 0.07401235173022253,
+     "uncertain_selection": 0.10234290755808254,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5303636489886612
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.1,
+     "uncertain_escape": 0.13410449955886677,
+     "uncertain_selection": 0.15165179884325067,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5272251699179819
+    },
+    {
+     "mode": "early",
+     "K": 10,
+     "level": 0.2,
+     "uncertain_escape": 0.2527203215371042,
+     "uncertain_selection": 0.23987844328987354,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.517370641767147
+    }
+   ],
+   "init": [
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.001,
+     "uncertain_escape": 0.01499852955592589,
+     "uncertain_selection": 0.02901676306244486,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5309962462830441
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.002,
+     "uncertain_escape": 0.02303695716106264,
+     "uncertain_selection": 0.04823056563082051,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5311550338202136
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.005,
+     "uncertain_escape": 0.04597588471718459,
+     "uncertain_selection": 0.09057935496519949,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.53126633826749
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.01,
+     "uncertain_escape": 0.0794039800019606,
+     "uncertain_selection": 0.14577002254680912,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5314251258046596
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.02,
+     "uncertain_escape": 0.1410646015096559,
+     "uncertain_selection": 0.2204685815116165,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5317585285756298
+    },
+    {
+     "mode": "init",
+     "K": null,
+     "level": 0.05,
+     "uncertain_escape": 0.32006666013135965,
+     "uncertain_selection": 0.3925105381825311,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5339279441558017
+    }
+   ],
+   "persist": [
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.01,
+     "uncertain_escape": 0.019801980198019802,
+     "uncertain_selection": 0.03519262817370846,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5308144830572166
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.02,
+     "uncertain_escape": 0.035290657778649155,
+     "uncertain_selection": 0.05411234192726203,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.530802229356599
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.05,
+     "uncertain_escape": 0.07460052935986668,
+     "uncertain_selection": 0.10204881874326047,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5303733498349835
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.1,
+     "uncertain_escape": 0.13420252916380748,
+     "uncertain_selection": 0.15449465738653073,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5272170007842368
+    },
+    {
+     "mode": "persist",
+     "K": null,
+     "level": 0.2,
+     "uncertain_escape": 0.24997549259876484,
+     "uncertain_selection": 0.23830996961082246,
+     "selection_unresolved": 0.0,
+     "mean_unresolved_prob": 0.0,
+     "mean_escape_prob": 0.5172113436591185
+    }
+   ]
+  }
+ }
+}

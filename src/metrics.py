@@ -10,12 +10,19 @@ def band_fraction(prob, lo=0.1, hi=0.9):
 def selection_uncertain_fraction(probs, lo=0.1, hi=0.9, min_survive=0.5):
     """Fraction of initial conditions that usually survive but whose selected minimizer is uncertain.
 
-    q = P(+m | survive). Counted if P(survive) >= min_survive and lo < q < hi.
+    q = P(+m | reached a minimizer). Where no run reached either minimizer, q is undefined and the
+    initial condition counts as unresolved (see selection_unresolved_fraction), not as uncertain.
     """
     s, plus, minus = probs["survive"], probs["plus"], probs["minus"]
     tot = plus + minus
-    q = np.divide(plus, tot, out=np.full_like(s, 0.5), where=tot > 0)
-    return float(np.mean((s >= min_survive) & (q > lo) & (q < hi)))
+    q = np.divide(plus, tot, out=np.full_like(s, np.nan, dtype=float), where=tot > 0)
+    with np.errstate(invalid="ignore"):
+        return float(np.mean((s >= min_survive) & (tot > 0) & (q > lo) & (q < hi)))
+
+
+def selection_unresolved_fraction(probs, min_survive=0.5):
+    """Fraction that usually survives but where no run reached either minimizer."""
+    return float(np.mean((probs["survive"] >= min_survive) & (probs["plus"] + probs["minus"] == 0)))
 
 
 def interface_fraction(mask):

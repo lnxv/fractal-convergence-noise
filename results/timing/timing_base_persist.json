@@ -1,0 +1,72 @@
+{
+ "tag": "base_persist",
+ "T": 200,
+ "trials": 64,
+ "res": 101,
+ "window": [
+  2.0,
+  2.7,
+  -0.3,
+  0.3
+ ],
+ "r_conv": 0.001,
+ "deterministic": {
+  "uncertain_escape": 0.0,
+  "uncertain_selection": 0.0,
+  "selection_unresolved": 0.0,
+  "mean_unresolved_prob": 0.0,
+  "mean_escape_prob": 0.5309283403587883
+ },
+ "records": [
+  {
+   "mode": "persist",
+   "K": null,
+   "level": 0.01,
+   "uncertain_escape": 0.020096069012841878,
+   "uncertain_selection": 0.03362415449465739,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5308134619154985
+  },
+  {
+   "mode": "persist",
+   "K": null,
+   "level": 0.02,
+   "uncertain_escape": 0.03401627291442016,
+   "uncertain_selection": 0.05401431232232134,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5307782325262229
+  },
+  {
+   "mode": "persist",
+   "K": null,
+   "level": 0.05,
+   "uncertain_escape": 0.07371826291540046,
+   "uncertain_selection": 0.09930398980492108,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5305928953043819
+  },
+  {
+   "mode": "persist",
+   "K": null,
+   "level": 0.1,
+   "uncertain_escape": 0.133712381139104,
+   "uncertain_selection": 0.15174982844819135,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5271833031075385
+  },
+  {
+   "mode": "persist",
+   "K": null,
+   "level": 0.2,
+   "uncertain_escape": 0.25046564062346827,
+   "uncertain_selection": 0.23242819331438094,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5173466449367708
+  }
+ ]
+}

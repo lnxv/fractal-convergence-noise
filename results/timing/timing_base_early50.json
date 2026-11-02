@@ -1,0 +1,72 @@
+{
+ "tag": "base_early50",
+ "T": 200,
+ "trials": 64,
+ "res": 101,
+ "window": [
+  2.0,
+  2.7,
+  -0.3,
+  0.3
+ ],
+ "r_conv": 0.001,
+ "deterministic": {
+  "uncertain_escape": 0.0,
+  "uncertain_selection": 0.0,
+  "selection_unresolved": 0.0,
+  "mean_unresolved_prob": 0.0,
+  "mean_escape_prob": 0.5309283403587883
+ },
+ "records": [
+  {
+   "mode": "early",
+   "K": 50,
+   "level": 0.01,
+   "uncertain_escape": 0.019801980198019802,
+   "uncertain_selection": 0.033918243309479464,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5307904862268406
+  },
+  {
+   "mode": "early",
+   "K": 50,
+   "level": 0.02,
+   "uncertain_escape": 0.034898539358886385,
+   "uncertain_selection": 0.05254386824821096,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.531057004215273
+  },
+  {
+   "mode": "early",
+   "K": 50,
+   "level": 0.05,
+   "uncertain_escape": 0.07362023331045976,
+   "uncertain_selection": 0.10136261150867562,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5305668561905695
+  },
+  {
+   "mode": "early",
+   "K": 50,
+   "level": 0.1,
+   "uncertain_escape": 0.13586903244779924,
+   "uncertain_selection": 0.1510636212136065,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5273625134790707
+  },
+  {
+   "mode": "early",
+   "K": 50,
+   "level": 0.2,
+   "uncertain_escape": 0.24958337417900206,
+   "uncertain_selection": 0.232722282129203,
+   "selection_unresolved": 0.0,
+   "mean_unresolved_prob": 0.0,
+   "mean_escape_prob": 0.5175442358592295
+  }
+ ]
+}

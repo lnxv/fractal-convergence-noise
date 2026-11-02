@@ -114,16 +114,18 @@ def outcome_probabilities(u0, v0, p: Params, mode, sigma, trials=128, seed=0, ch
     """Estimate outcome probabilities per initial condition from independent noisy runs.
 
     Returns a dict of arrays shaped like u0:
-      survive   P(no escape within p.steps)
-      plus      P(no escape and final state closest to the minimizer (+m, +m))
-      minus     P(no escape and final state closest to the minimizer (-m, -m))
-      converged P(final state within conv_tol of a minimizer)
-    For persistent noise (additive, sgd) iterates keep fluctuating, so `plus`/`minus`
-    record which minimizer the run is attracted to rather than exact convergence.
+      survive     P(no escape within p.steps)
+      plus        P(no escape and final state within conv_tol of the minimizer (+m, +m))
+      minus       P(no escape and final state within conv_tol of the minimizer (-m, -m))
+      unresolved  P(no escape and final state within conv_tol of neither minimizer)
+      converged   plus + minus
+    Reaching a minimizer means being within conv_tol of it, not merely being closer to it than to the
+    other stationary points. Under persistent additive or SGD noise the iterates keep fluctuating, so
+    for those models runs near a minimizer can be counted as unresolved; that is reported, not hidden.
     """
     rng = np.random.default_rng(seed)
     m = p.minimizer
-    acc = {k: np.zeros(np.shape(u0), dtype=np.int64) for k in ("survive", "plus", "minus", "converged")}
+    acc = {k: np.zeros(np.shape(u0), dtype=np.int64) for k in ("survive", "plus", "minus", "unresolved")}
     done = 0
     while done < trials:
         k = min(chunk, trials - done)
@@ -131,13 +133,16 @@ def outcome_probabilities(u0, v0, p: Params, mode, sigma, trials=128, seed=0, ch
         vb = np.broadcast_to(v0, (k,) + np.shape(v0))
         u, v, esc = simulate(ub, vb, p, mode, sigma, "independent", rng)
         alive = ~esc
-        d_plus, d_minus, d_zero = np.hypot(u - m, v - m), np.hypot(u + m, v + m), np.hypot(u, v)
+        near_p = alive & (np.hypot(u - m, v - m) < conv_tol)
+        near_m = alive & (np.hypot(u + m, v + m) < conv_tol)
         acc["survive"] += alive.sum(axis=0)
-        acc["plus"] += (alive & (d_plus < d_minus) & (d_plus < d_zero)).sum(axis=0)
-        acc["minus"] += (alive & (d_minus <= d_plus) & (d_minus < d_zero)).sum(axis=0)
-        acc["converged"] += (alive & (np.minimum(d_plus, d_minus) < conv_tol)).sum(axis=0)
+        acc["plus"] += near_p.sum(axis=0)
+        acc["minus"] += near_m.sum(axis=0)
+        acc["unresolved"] += (alive & ~near_p & ~near_m).sum(axis=0)
         done += k
-    return {key: val / trials for key, val in acc.items()}
+    out = {key: val / trials for key, val in acc.items()}
+    out["converged"] = out["plus"] + out["minus"]
+    return out
 
 
 def survival_probability(u0, v0, p: Params, mode, sigma, trials=128, seed=0, chunk=32):
